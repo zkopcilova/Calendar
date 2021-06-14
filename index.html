@@ -1,0 +1,89 @@
+<!--     
+    Projekt byl vytvořen podle tutoriálu, jehož autorem je Zack Wilson, za studijními účely.
+    Byl upraven vzhled i přidána vlastní funkcionalita navíc.
+
+    Autor: Zuzana Kopčilová
+    Datum: 6/2021
+-->
+
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <title>Kalendář</title>
+</head>
+
+<body>
+    <div id="container">
+
+        <!--záhlaví-->
+        <div id="header">
+            <div id="month"></div>
+            <div>
+                <button id="predchozi">Předchozí</button>
+                <button id="nasledujici">Následující</button>
+            </div>
+        </div>
+
+        <!--dny v týdnu-->
+        <div id="day_columns">
+            <div>Pondělí</div>
+            <div>Úterý</div>
+            <div>Středa</div>
+            <div>Čtvrtek</div>
+            <div>Pátek</div>
+            <div>Sobota</div>
+            <div>Neděle</div>
+        </div>
+
+        <!--kalendář-->
+        <div id="day_blocks">
+
+        </div>
+    </div>
+
+    <div id="newEventModal">
+        <h2>Nová událost</h2>
+
+        <input id="eventTitleInput" placeholder="Název události" />
+
+        <button id="saveButton">Uložit</button>
+        <button id="cancelButton">Zrušit</button>
+
+    </div>
+
+    <div id="deleteModal">
+        <h2>Událost</h2>
+        <p id="eventText"></p>
+
+        <button id="editButton">Upravit</button>
+        <button id="deleteButton">Odstranit</button>
+        <button id="closeButton">Zrušit</button>
+    </div>
+
+    <div id="editModal">
+        <h2>Upravit událost</h2>
+        <p id="oldEvent"></p>
+
+        <input id="newTitleInput" placeholder="Nový název události" />
+
+        <button id="saveButton2">Uložit</button>
+        <button id="cancelButton2">Zrušit</button>
+    </div>
+
+    <div id="modalBackDrop">
+    </div>
+    
+    <!--link na soubor .js-->
+    <script src="./script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,151 @@
+/*
+    Calendar
+    Soubor stylů
+    
+    Autor: Zack Wilson
+    Datum: 26.1.2021
+    Zdroj: https://github.com/portexe/VanillaCalendar/blob/master/style.css
+
+    Autor úprav: Zuzana Kopčilová
+    Datum úprav: 6/2021
+    
+*/
+
+
+
+body {
+    display: flex;
+    margin-top: 25px;
+    justify-content: center;
+    background-color: #96a9cc;
+    font-family: 'Poppins', sans-serif;
+  }
+  button {
+    width: 85px;
+    cursor: pointer;
+    box-shadow: 0px 0px 2px gray;
+    border: none;
+    outline: none;
+    padding: 8px;
+    border-radius: 5px;
+    color: white;
+  }
+  
+  #header {
+    padding: 10px;
+    color: hsl(0, 0%, 100%);
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+  }
+  #header button {
+    background-color:#ff52e8;
+    font-weight: 700;
+  }
+  #container {
+    width: 770px;
+  }
+  #day_columns {
+    width: 100%;
+    display: flex;
+    color: #004766;
+    text-align: center;
+  }
+  #day_columns div {
+    width: 100px;
+    padding: 10px;
+  }
+  #day_blocks {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .day {
+    width: 100px;
+    padding: 10px;
+    height: 100px;
+    cursor: pointer;
+    box-sizing: border-box;
+    background-color: white;
+    opacity: 80%;
+    margin: 5px;
+    box-shadow: 0px 0px 3px #CBD4C2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .day:hover {
+    background-color: #ffd3f9;
+  }
+  
+  .day + #currentDay {
+    background-color: #ffa6fb;
+    opacity: 100%;
+  }
+  .event {
+    font-size: 10px;
+    padding: 3px;
+    background-color: #58bae4;
+    color: white;
+    border-radius: 5px;
+    max-height: 55px;
+    overflow: hidden;
+  }
+  .padding {
+    cursor: default !important;
+    background-color: #e0eaff !important;
+    box-shadow: none !important;
+  }
+  #newEventModal, #deleteModal, #editModal {
+    display: none;
+    z-index: 20;
+    padding: 25px;
+    background-color: #ffd0fb;
+    box-shadow: 0px 0px 3px black;
+    border-radius: 10px;
+    width: 350px;
+    top: 100px;
+    left: calc(50% - 175px);
+    position: absolute;
+    text-align: center;
+    color: #e01fc7;
+  }
+  #eventTitleInput, #newTitleInput {
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 25px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    box-shadow: 0px 0px 3px gray;
+  }
+  #eventTitleInput.error {
+    border: 2px solid red;
+  }
+  #cancelButton, #cancelButton2, #deleteButton {
+    background-color: #fd548c;
+    font-weight: 700;
+  }
+  #saveButton, #saveButton2, #closeButton {
+    background-color: #7595ff;
+    font-weight: 700;
+  }
+  #editButton {
+    background-color: #58e458;
+    font-weight: 700;
+  }
+  #eventText {
+    font-size: 14px;
+  }
+  #modalBackDrop {
+    display: none;
+    top: 0px;
+    left: 0px;
+    z-index: 10;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background-color: rgba(0,0,0,0.8);
+  }
